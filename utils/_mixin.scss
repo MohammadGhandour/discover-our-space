@@ -1,0 +1,151 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Barlow Condensed';
+    font-size: 2rem;
+}
+header{
+    padding-top: 40px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .navbar__links{
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        margin: 0;
+        background: rgba($color: white, $alpha: 0.1);
+        backdrop-filter: blur(8px);
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+    &__line{
+        background: rgba($color: white, $alpha: 0.5);
+        width: 60%;
+        height: 2px;
+        z-index: 1;
+        position: relative;
+        right: -50px;
+    }
+}
+.border{
+    height: 4px;
+    background: white;
+    position: relative;
+    top: 21px;
+}
+
+#sidebar{
+    display: none;
+}
+
+/*DESKTOP*/
+@media screen and (min-width:992px){
+    .navbar__links{
+        padding: 25px 10% 21px 10%;
+        font-size: 1.6rem;
+    }
+    a{
+        margin-right: 50px;
+    }
+    .logo{
+        margin-left: 75px;
+    }
+    .border{
+        width: calc(100% - 50px);
+    }
+}
+
+/*TABLETTE*/
+@media screen and (max-width:992px) and (min-width: 768px){
+    header{
+        padding-top: 0;
+    }
+    .navbar__links{
+        padding: 25px 0 21px 50px;
+        font-size: 1.5rem;
+    }
+    a{
+        margin-right: 15px;
+    }
+    .navbar__line, #sidebar{
+        display: none;
+    }
+    .logo{
+        margin-left: 75px;
+    }
+    .border{
+        width: calc(100% - 15px);
+    }
+}
+
+/*MOBILE*/
+@media screen and (max-width:768px){
+    header{
+        padding-top: 40px;
+    }
+    .navbar__line{
+        display: none;
+    }
+    .logo{
+        margin-left: 30px;
+    }
+    #first-navbar{
+        display: none;
+    }
+    #sidebar{
+        display: flex;
+        
+        #open{
+            margin-right: 30px;
+            width: 40px;
+            cursor: pointer;
+            transition: all .2s;
+        }
+        #close{
+            position: absolute;
+            right: 0;
+            width: 40px;
+            cursor: pointer;
+            transition: all .2s;
+            visibility: hidden;
+        }
+        .second-navbar{
+            background: rgba($color: #333, $alpha: 0.7);
+            width: 150px;
+            border-radius: 5px;
+            position: absolute;
+            top: 15px;
+            right: 0px;
+            list-style-type: none;
+            margin-top: 0px;
+            padding: 0;
+            z-index: -1;
+            transition: all .5s;
+            opacity: 0;
+
+            a{
+                margin-bottom: 10px;
+                padding-left: 10px;
+                display: block;
+                transition: all .2s;
+                font-size: 16px;
+                &:hover{
+                    background: rgba($color: #eee, $alpha: 0.2);
+                    border-radius: 4px;
+                }
+            }
+            .active{
+                border-bottom: #eee 2px solid;
+            }
+        }
+    }
+}

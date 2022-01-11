@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/destination.css">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Barlow+Condensed:wght@300&family=Barlow:wght@100;400&family=Forum&family=Gugi&family=Mulish:wght@200&family=Orbitron&family=Oxygen:wght@300&family=Poppins:wght@500&family=Raleway:wght@600&family=Roboto+Slab:wght@300&family=Space+Mono&family=Unica+One&family=Vollkorn&display=swap" rel="stylesheet">
+    <title>Space - Destination</title>
+</head>
+<body>
+
+    <div class="content">
+        <header>
+            <nav class="navbar">
+                <a href="index.html"><img src="media/home/logo.svg" alt="logo" class="logo"></a>
+                <div class="navbar__line"></div>
+                <ul class="navbar__links" id="first-navbar">
+                    <li class="navbar__link"><a href="index.html">00 home</a></li>
+                    <li class="navbar__link"><a href="destination.html">01 destination</a><div class="border"></div></li>
+                    <li class="navbar__link"><a href="crew.html">02 crew</a></li>
+                    <li class="navbar__link"><a href="technology.html">03 technology</a></li>
+                </ul>
+                <div id="sidebar">
+                    <img src="media/icon-hamburger.svg" alt="hamburger" id="open">
+                    <img src="media/icon-close.svg" alt="close" id="close">
+                    <ul class="second-navbar" id="secondNavbar">
+                        <li class="second-link"><a href="index.html">00 home</a></li>
+                        <li class="second-link"><a href="destination.html" class="active">01 destination</a></li>
+                        <li class="second-link"><a href="crew.html">02 crew</a></li>
+                        <li class="second-link"><a href="technology.html">03 technology</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container-planet">
+                <h2><span>01</span> pick your destination</h2>
+                <img src="media/destination/image-moon.png" alt="mars" id="planet-up">
+            </div>
+            <div class="infos">
+                <div class="infos__buttons">
+                    <button id="moon">moon <div class="border border-planet" id="border-moon"></div></button>
+                    <button id="mars">mars <div id="border-mars"></div></button>
+                    <button id="europa">europa <div id="border-europa"></div></button>
+                    <button id="titan">titan <div id="border-titan"></div></button>
+                </div>
+                <div class="infos__text">
+                    <h1 id="name" class="name">moon</h1>
+                    <img src="media/destination/image-moon.png" alt="mars" id="planet-down">
+                    <p id="info">See our planet as you've never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you're there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+                    <div class="infos__additionnal">
+                        <div class="single-info">
+                            <div class="title">avg. distance</div>
+                            <div class="data1"><span id="data1">334,400 km</span></div>
+                        </div>
+                        <div class="single-info">
+                            <div class="title">est. travel time</div>
+                            <div><span id="data2">3 days</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="JavaScript/destination.js"></script>
+</body>
+</html>

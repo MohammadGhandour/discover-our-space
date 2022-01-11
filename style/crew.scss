@@ -1,0 +1,143 @@
+@import "../utils/mixin";
+
+body{
+    background: url(../media/crew/background-crew-desktop.jpg) no-repeat center/cover;
+    overflow-x: hidden;
+}
+
+.meet-your-crew{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    white-space: nowrap;
+    span{
+        color: rgb(158, 158, 158);
+    }
+}
+
+main{
+    #role{
+        text-transform: uppercase;
+        color: rgba($color: white, $alpha: 0.5);
+        font-family: forum;
+    }
+    #nom{
+        text-transform: uppercase;
+        font-family: 'forum';
+        letter-spacing: 0.2rem;
+        color: rgba($color: white, $alpha: 0.9);
+        margin: 20px 0;
+        font-size: 3rem;
+    }
+    p{
+        font-size: 1.5rem;
+        color: rgba($color: white, $alpha: 0.9);
+    }
+    .buttons{
+        button{
+            width: 15px;
+            aspect-ratio: 1;
+            border: none;
+            border-radius: 50%;
+            background: rgba($color: #eee, $alpha: 0.5);
+            transition: all .2s;
+            cursor: pointer;
+            margin-right: 20px;
+            &:hover{
+                transform: scale(1.2);
+                background: rgba($color: #eee, $alpha: 1);
+            }
+        }
+        .active{
+            background: white;
+        }
+    }
+}
+
+
+/*DESKTOP*/
+@media screen and (max-width:1200px){
+    main{
+        margin-left: 0px;
+    }
+}
+@media screen and (min-width:992px) {
+    .meet-your-crew{
+        margin-left: 220px;
+    }
+    main{
+        width: 80%;
+        margin: 100px auto 0 210px;
+        display: flex;
+        align-items: center;
+        
+        p{
+            width: 100%;
+            min-width: 40%;
+        }
+
+        img{
+            height: 600px;
+        }
+    }
+}
+
+/*TABLETTE*/
+@media screen and (max-width:992px) and (min-width: 768px) {
+    body{
+        background: url(../media/crew/background-crew-tablet.jpg) no-repeat center/cover;
+        overflow-x: hidden;
+    }
+    .meet-your-crew{
+        text-align: center;
+        padding: 50px 0;
+        width: 280px;
+        margin: 0 auto 20px auto;
+        border-bottom: 2px solid rgba($color: #eee, $alpha: 0.5);
+        padding-bottom: 10px;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        p{
+            width: 80%;
+            margin: auto;
+        }
+
+        img{
+            height: 350px;
+            margin-top: 50px;
+        }
+    }
+}
+
+/*MOBILE*/
+@media screen and (max-width:768px){
+    .meet-your-crew{
+        text-align: center;
+        padding: 50px 0;
+        width: 280px;
+        margin: 0 auto 20px auto;
+        border-bottom: 2px solid rgba($color: #eee, $alpha: 0.5);
+        padding-bottom: 10px;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        p{
+            width: 80%;
+            margin: auto;
+        }
+
+        img{
+            height: 350px;
+            margin-top: 50px;
+        }
+    }
+}

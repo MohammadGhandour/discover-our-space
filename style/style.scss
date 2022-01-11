@@ -1,0 +1,230 @@
+@import "../utils/mixin";
+
+body{
+    background: url(../media/home/background-home-desktop.jpg) no-repeat center/cover;
+    overflow-x: hidden;
+}
+
+main{
+    display: flex;
+
+    span{
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        letter-spacing: 0.1rem;
+    }
+    h1{
+        text-transform: uppercase;
+        margin: 20px 0;
+        font-family: forum;
+        letter-spacing: 1.5rem;
+        font-size: 8rem;
+    }
+    p{
+        margin: 0;
+        font-size: 1.6rem;
+    }
+}
+
+#sidebar{
+    display: none;
+}
+/*DESKTOP*/
+@media screen and (min-width:992px){
+    main{
+        width: 71%;
+        margin: auto;
+        margin-top: 150px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        span{
+            font-size: 3rem;
+        }
+        p{
+            font-size: 1.7rem;
+        }
+        .intro{
+            width: 500px;
+        }
+        a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            background: #eee;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            font-family: forum;
+            font-size: 2rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            color: #333;
+            width: 200px;
+            margin-right: 10%;
+            text-decoration: none;
+            transition: all .2s;
+            &:hover, &:focus, &:active{
+                background: #333;
+                color: #eee;
+            }
+        }
+    }
+    
+}
+
+
+
+/*TABLETTE*/
+@media screen and (max-width:992px) and (min-width: 768px){
+    body{
+        background: url(../media/home/background-home-tablet.jpg) no-repeat center/cover;
+        overflow-x: hidden;
+        height: 100%;
+    }
+    main{
+        flex-direction: column;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        margin-top: 100px;
+
+        span{
+            font-size: 2rem;
+        }
+        p{
+            width: 100%;
+        }
+        .explore{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            background: #eee;
+            width: 200px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            font-family: forum;
+            font-size: 2rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            color: #333;
+            margin-top: 150px;
+            margin-bottom: 50px;
+            text-decoration: none;
+            transition: all .2s;
+            :hover{
+                background: #333;
+                color: #eee;
+            }
+        }
+    }
+}
+
+
+/*MOBILE*/
+@media screen and (max-width:768px){
+    body{
+        background: url(../media/home/background-home-tablet.jpg) no-repeat center/cover;
+    }
+    header{
+        padding-top: 40px;
+    }
+    .navbar__line{
+        display: none;
+    }
+    .logo{
+        margin-left: 30px;
+    }
+    #first-navbar{
+        display: none;
+    }
+    #sidebar{
+        display: flex;
+        
+        #open{
+            margin-right: 30px;
+            width: 40px;
+            cursor: pointer;
+            transition: all .2s;
+        }
+        #close{
+            position: absolute;
+            right: 0;
+            width: 40px;
+            cursor: pointer;
+            transition: all .2s;
+            visibility: hidden;
+        }
+        .second-navbar{
+            background: rgba($color: #333, $alpha: 0.7);
+            width: 150px;
+            border-radius: 5px;
+            position: absolute;
+            top: 0;
+            right: 0px;
+            list-style-type: none;
+            margin-top: 0px;
+            padding: 0;
+            z-index: -1;
+            transition: all .5s;
+            opacity: 0;
+
+            a{
+                margin-bottom: 10px;
+                padding-left: 10px;
+                display: block;
+                transition: all .2s;
+                font-size: 16px;
+                &:hover{
+                    background: rgba($color: #eee, $alpha: 0.2);
+                    border-radius: 4px;
+                }
+            }
+            .active{
+                border-bottom: #eee 2px solid;
+            }
+        }
+    }
+    main{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+
+        p, span{
+            font-size: 20px;
+        }
+        p{
+            width: 70%;
+            margin: auto;
+        }
+        h1{
+            font-size: 2rem;
+        }
+        a{
+            margin-top: 70px;
+            background: #eee;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            text-transform: uppercase;
+            font-size: 24px;
+            cursor: pointer;
+            margin-bottom: 50px;
+            transition: all .2s;
+            :hover{
+                background: #333;
+                color: #eee;
+            }
+        }
+    }
+}

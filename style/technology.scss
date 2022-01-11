@@ -1,0 +1,174 @@
+@import "../utils/mixin";
+
+body{
+    background: url(../media/technology/background-technology-desktop.jpg) no-repeat center/cover;
+    overflow-x: hidden;
+}
+
+.space-launch-101{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    white-space: nowrap;
+    
+    span{
+        color: rgb(158, 158, 158);
+    }
+}
+
+main{
+    display: flex;
+
+    button{
+        width: 70px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        border: 1px solid rgba($color: white, $alpha: 0.5);
+        background: none;
+        color: white;
+        font-size: 2rem;
+        font-family: forum;
+        cursor: pointer;
+        transition: all 0.2s;
+        margin-top: 35px;
+
+        &:hover{
+            background: #eee;
+            color: #333;
+        }
+    }
+    .active{
+        color: #333;
+        background: #eee;
+    }
+}
+
+
+/*DESKTOP*/
+@media screen and (min-width:992px){
+    .space-launch-101{
+        margin-left: 220px;
+    }
+    main{
+        width: 85%;
+        margin-left: 15%;
+        align-items: center;
+        justify-content: space-between;
+
+        .buttons{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        .texts{
+            margin-left: 40px;
+    
+            #miniTitle{
+                color: rgba($color: white, $alpha: 0.5);
+                text-transform: uppercase;
+                font-size: 1.5rem;
+            }
+            #bigTitle{
+                text-transform: uppercase;
+                font-family: forum;
+                letter-spacing: 0.3rem;
+                margin: 0;
+            }
+            p{
+                font-size: 1.8rem;
+                color: rgba($color: white, $alpha: 0.9);
+                width: 73%;
+            }
+        }
+        img{
+            width: 450px;
+        }
+        #imageDown{
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 1500px){
+    main{
+        width: 100%;
+        margin-left: 10px;
+    }
+    .space-launch-101{
+        margin-left: 10px;
+    }
+}
+
+/*TABLETTE*/
+@media screen and (max-width:992px) and (min-width: 768px) {
+    .space-launch-101{
+        margin-left: 0px;
+        text-align: center;
+        padding: 50px 0;
+        width: 280px;
+        margin: 0 auto 20px auto;
+        border-bottom: 2px solid rgba($color: #eee, $alpha: 0.5);
+        padding-bottom: 10px;
+    }
+    main{
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 50px;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        .buttons{
+            
+            button{
+                margin: 0 50px;
+            }
+        }
+        p{
+            width: 80%;
+            margin: 0 auto 50px auto;
+        }
+    }
+    #imageUp{
+        display: none;
+    }
+}
+
+
+/*MOBILE*/
+@media screen and (max-width:768px){
+    .space-launch-101{
+        margin-left: 0px;
+        text-align: center;
+        padding: 50px 0;
+        width: 280px;
+        margin: 0 auto 20px auto;
+        border-bottom: 2px solid rgba($color: #eee, $alpha: 0.5);
+        padding-bottom: 10px;
+    }
+    main{
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 50px;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        .buttons{
+            
+            button{
+                margin: 0 20px;
+            }
+        }
+        p{
+            width: 100%;
+            margin: 0 auto 50px auto;
+        }
+    }
+    #imageUp{
+        display: none;
+    }
+    #imageDown{
+        width: 100%;
+        margin-bottom: 50px;
+        border-radius: 15px;
+    }
+}
