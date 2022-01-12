@@ -433,6 +433,7 @@ main p {
     margin-bottom: 50px;
     -webkit-transition: all .2s;
     transition: all .2s;
+    text-decoration: none;
   }
   main a :hover {
     background: #333;
