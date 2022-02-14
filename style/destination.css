@@ -180,6 +180,7 @@ main {
   margin-top: 30px;
   margin-left: 165px;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 main h2 {
@@ -250,6 +251,77 @@ main .infos__additionnal .title {
   color: rgba(255, 255, 255, 0.5);
 }
 
+main .infos .back-next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .infos .back-next .next {
+  color: #eee;
+  width: 100px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 5px solid #eee;
+  font-weight: bold;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .infos .back-next .next i {
+  margin-left: 10px;
+  font-size: 24px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main .infos .back-next .next:hover > i {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+main .infos .back-next .back {
+  color: #eee;
+  width: 100px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 5px solid #eee;
+  font-weight: bold;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .infos .back-next .back i {
+  margin-right: 10px;
+  font-size: 24px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+main .infos .back-next .back:hover > i {
+  -webkit-transform: translateX(-10px) rotate(180deg);
+          transform: translateX(-10px) rotate(180deg);
+}
+
 /*DESKTOP*/
 @media screen and (max-width: 1200px) {
   main {
@@ -293,6 +365,9 @@ main .infos__additionnal .title {
   main .infos__additionnal {
     width: 80%;
   }
+  main .infos .nextButton {
+    display: none;
+  }
 }
 
 /*TABLETTE*/
@@ -328,6 +403,9 @@ main .infos__additionnal .title {
   }
   main .infos__text img {
     width: 300px;
+  }
+  main .infos .nextButton {
+    display: none;
   }
 }
 

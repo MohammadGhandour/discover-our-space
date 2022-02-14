@@ -11,7 +11,7 @@ main{
     margin-top: 30px;
     margin-left: 165px;
     width: 100%;
-
+    margin-bottom: 20px;
     h2{
         font-size: 1.6rem;
         text-transform: uppercase;
@@ -65,8 +65,51 @@ main{
                 color: rgba($color: white, $alpha: 0.5);
             }
         }
+        .back-next{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .next{
+                color: #eee;
+                width: 100px;
+                text-transform: uppercase;
+                text-decoration: none;
+                border-bottom: 5px solid #eee;
+                font-weight: bold;
+                margin-bottom: 50px;
+                display: flex;
+                align-items: center;
+                i{
+                    margin-left: 10px;
+                    font-size: 24px;
+                    transition: all 0.3s;
+                }
+                &:hover>i{
+                    transform: translateX(10px);
+                }
+            }
+            .back{
+                color: #eee;
+                width: 100px;
+                text-transform: uppercase;
+                text-decoration: none;
+                border-bottom: 5px solid #eee;
+                font-weight: bold;
+                margin-bottom: 50px;
+                display: flex;
+                align-items: center;
+                i{
+                    margin-right: 10px;
+                    font-size: 24px;
+                    transition: all 0.3s;
+                    transform: rotate(180deg);
+                }
+                &:hover>i{
+                    transform: translateX(-10px) rotate(180deg);
+                }
+            }
+        }
     }
-
 }
 
 /*DESKTOP*/
@@ -109,6 +152,9 @@ main{
             &__additionnal{
                 width: 80%;
             }
+            .nextButton{
+                display: none;
+            }
         }
     }
 }
@@ -143,6 +189,9 @@ main{
                 img{
                     width: 300px;
                 }
+            }
+            .nextButton{
+                display: none;
             }
         }
     }

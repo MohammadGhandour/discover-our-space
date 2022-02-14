@@ -80,6 +80,9 @@ main{
             height: 600px;
         }
     }
+    .back-next{
+        display: none;
+    }
 }
 
 /*TABLETTE*/
@@ -112,6 +115,9 @@ main{
             margin-top: 50px;
         }
     }
+    .back-next{
+        display: none;
+    }
 }
 
 /*MOBILE*/
@@ -138,6 +144,53 @@ main{
         img{
             height: 350px;
             margin-top: 50px;
+            border-bottom: 5px solid #eee;
+        }
+        .back-next{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 85%;
+            margin-top: 30px;
+            .next{
+                color: #eee;
+                width: 100px;
+                text-transform: uppercase;
+                text-decoration: none;
+                border-bottom: 5px solid #eee;
+                font-weight: bold;
+                margin-bottom: 50px;
+                display: flex;
+                align-items: center;
+                i{
+                    margin-left: 10px;
+                    font-size: 24px;
+                    transition: all 0.3s;
+                }
+                &:hover>i{
+                    transform: translateX(10px);
+                }
+            }
+            .back{
+                color: #eee;
+                width: 100px;
+                text-transform: uppercase;
+                text-decoration: none;
+                border-bottom: 5px solid #eee;
+                font-weight: bold;
+                margin-bottom: 50px;
+                display: flex;
+                align-items: center;
+                i{
+                    margin-right: 10px;
+                    font-size: 24px;
+                    transition: all 0.3s;
+                    transform: rotate(180deg);
+                }
+                &:hover>i{
+                    transform: translateX(-10px) rotate(180deg);
+                }
+            }
         }
     }
 }
