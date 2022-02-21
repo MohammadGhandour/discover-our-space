@@ -1,20 +1,15 @@
-const open = document.getElementById('open');
-const close = document.getElementById('close');
-const secondNavbar = document.getElementById('secondNavbar');
+const primaryNav = document.getElementById('primary-navigation');
+const navToggle = document.querySelector('.mobile-nav-toggle')
 const content = document.getElementById('content');
 
-open.onclick = function () {
-    secondNavbar.style.opacity = "1";
-    secondNavbar.style.zIndex = "0";
-    open.style.opacity = "0";
-    close.style.visibility = "visible";
-    close.style.marginRight = "176px";
-}
+navToggle.addEventListener('click', () => {
+    const visibility = primaryNav.getAttribute("data-visible");
 
-close.onclick = function () {
-    secondNavbar.style.opacity = "0";
-    secondNavbar.style.zIndex = "-1";
-    open.style.opacity = "1";
-    close.style.visibility = "hidden";
-    close.style.marginRight = "0px";
-}
+    if (visibility === 'false') {
+        primaryNav.setAttribute("data-visible", true);
+        navToggle.setAttribute("aria-expanded", true);
+    } else {
+        primaryNav.setAttribute("data-visible", false);
+        navToggle.setAttribute("aria-expanded", false);
+    }
+});

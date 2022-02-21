@@ -1,22 +1,17 @@
-const open = document.getElementById('open');
-const close = document.getElementById('close');
-const secondNavbar = document.getElementById('secondNavbar');
+const primaryNav = document.getElementById('primary-navigation');
+const navToggle = document.querySelector('.mobile-nav-toggle');
 
-open.onclick = function () {
-    secondNavbar.style.opacity = "1";
-    secondNavbar.style.zIndex = "0";
-    open.style.opacity = "0";
-    close.style.visibility = "visible";
-    close.style.marginRight = "176px";
-}
+navToggle.addEventListener('click', () => {
+    const visibility = primaryNav.getAttribute("data-visible");
 
-close.onclick = function () {
-    secondNavbar.style.opacity = "0";
-    secondNavbar.style.zIndex = "-1";
-    open.style.opacity = "1";
-    close.style.visibility = "hidden";
-    close.style.marginRight = "0px";
-}
+    if (visibility === 'false') {
+        primaryNav.setAttribute("data-visible", true);
+        navToggle.setAttribute("aria-expanded", true);
+    } else {
+        primaryNav.setAttribute("data-visible", false);
+        navToggle.setAttribute("aria-expanded", false);
+    }
+});
 
 const first = document.getElementById('first');
 const second = document.getElementById('second');
@@ -32,8 +27,8 @@ const imageDown = document.getElementById('imageDown');
 first.onclick = function () {
     bigTitle.innerText = "Launch vehicle";
     description.innerText = "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!";
-    imageUp.src="media/technology/image-launch-vehicle-portrait.jpg";
-    imageDown.src="media/technology/image-launch-vehicle-landscape.jpg";
+    imageUp.src = "media/technology/image-launch-vehicle-portrait.jpg";
+    imageDown.src = "media/technology/image-launch-vehicle-landscape.jpg";
     first.classList.add("active");
     second.classList.remove("active");
     third.classList.remove("active");
@@ -42,8 +37,8 @@ first.onclick = function () {
 second.onclick = function () {
     bigTitle.innerText = "Spaceport";
     description.innerText = "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth's rotation for launch.";
-    imageUp.src="media/technology/image-spaceport-portrait.jpg";
-    imageDown.src="media/technology/image-spaceport-landscape.jpg";
+    imageUp.src = "media/technology/image-spaceport-portrait.jpg";
+    imageDown.src = "media/technology/image-spaceport-landscape.jpg";
     first.classList.remove("active");
     second.classList.add("active");
     third.classList.remove("active");
@@ -52,8 +47,8 @@ second.onclick = function () {
 third.onclick = function () {
     bigTitle.innerText = "Space capsule";
     description.innerText = "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.";
-    imageUp.src="media/technology/image-space-capsule-portrait.jpg";
-    imageDown.src="media/technology/image-space-capsule-landscape.jpg";
+    imageUp.src = "media/technology/image-space-capsule-portrait.jpg";
+    imageDown.src = "media/technology/image-space-capsule-landscape.jpg";
     first.classList.remove("active");
     second.classList.remove("active");
     third.classList.add("active");
