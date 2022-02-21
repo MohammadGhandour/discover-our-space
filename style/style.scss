@@ -26,9 +26,6 @@ main{
     }
 }
 
-#sidebar{
-    display: none;
-}
 /*DESKTOP*/
 @media screen and (min-width:992px){
     main{
@@ -137,56 +134,6 @@ main{
     }
     .logo{
         margin-left: 30px;
-    }
-    #first-navbar{
-        display: none;
-    }
-    #sidebar{
-        display: flex;
-        
-        #open{
-            margin-right: 30px;
-            width: 40px;
-            cursor: pointer;
-            transition: all .2s;
-        }
-        #close{
-            position: absolute;
-            right: 0;
-            width: 40px;
-            cursor: pointer;
-            transition: all .2s;
-            visibility: hidden;
-        }
-        .second-navbar{
-            background: rgba($color: #333, $alpha: 0.7);
-            width: 150px;
-            border-radius: 5px;
-            position: absolute;
-            top: 0;
-            right: 0px;
-            list-style-type: none;
-            margin-top: 0px;
-            padding: 0;
-            z-index: -1;
-            transition: all .5s;
-            opacity: 0;
-
-            a{
-                margin-bottom: 10px;
-                padding-left: 10px;
-                display: block;
-                transition: all .2s;
-                font-size: 16px;
-                &:hover{
-                    background: rgba($color: #eee, $alpha: 0.2);
-                    border-radius: 4px;
-                }
-            }
-            .active{
-                border-bottom: #eee 2px solid;
-            }
-        }
     }
     main{
         width: 100%;

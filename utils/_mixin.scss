@@ -15,17 +15,25 @@ header{
 
     .navbar__links{
         display: flex;
-        justify-content: space-between;
         list-style-type: none;
         margin: 0;
-        background: rgba($color: white, $alpha: 0.1);
-        backdrop-filter: blur(8px);
+        background: rgba($color: black, $alpha: 0.75);
+    }
+    @supports (backdrop-filter: blur(1rem)) {
+        .navbar__links {
+            background: rgba($color: #eee, $alpha: 0.1);
+            backdrop-filter: blur(1rem);
+        }
     }
     a{
         text-decoration: none;
         color: white;
         text-transform: uppercase;
         white-space: nowrap;
+
+        span {
+            font-weight: bold;
+        }
     }
     &__line{
         background: rgba($color: white, $alpha: 0.5);
@@ -43,7 +51,7 @@ header{
     top: 21px;
 }
 
-#sidebar{
+.mobile-nav-toggle {
     display: none;
 }
 
@@ -52,6 +60,7 @@ header{
     .navbar__links{
         padding: 25px 10% 21px 10%;
         font-size: 1.6rem;
+        justify-content: space-between;
     }
     a{
         margin-right: 50px;
@@ -98,54 +107,52 @@ header{
     .logo{
         margin-left: 30px;
     }
-    #first-navbar{
-        display: none;
-    }
-    #sidebar{
-        display: flex;
-        
-        #open{
-            margin-right: 30px;
-            width: 40px;
-            cursor: pointer;
-            transition: all .2s;
-        }
-        #close{
-            position: absolute;
-            right: 0;
-            width: 40px;
-            cursor: pointer;
-            transition: all .2s;
-            visibility: hidden;
-        }
-        .second-navbar{
-            background: rgba($color: #333, $alpha: 0.7);
-            width: 150px;
-            border-radius: 5px;
-            position: absolute;
-            top: 15px;
-            right: 0px;
-            list-style-type: none;
-            margin-top: 0px;
-            padding: 0;
-            z-index: -1;
-            transition: all .5s;
-            opacity: 0;
 
-            a{
-                margin-bottom: 10px;
-                padding-left: 10px;
-                display: block;
-                transition: all .2s;
-                font-size: 16px;
-                &:hover{
-                    background: rgba($color: #eee, $alpha: 0.2);
-                    border-radius: 4px;
-                }
-            }
-            .active{
-                border-bottom: #eee 2px solid;
-            }
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        border: 0;
+        width: 2rem;
+        aspect-ratio: 1;
+        z-index: 9999;
+        background: url("/media/icon-hamburger.svg") no-repeat;
+        top: 2rem;
+        right: 2rem;
+        cursor: pointer;
+    }
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background: url("/media/icon-close.svg") no-repeat;
+    }
+
+    .navbar__links {
+        position: fixed;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        padding: 5rem 2rem;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-out;
+
+        a{
+            display: block;
+            width: 100%;
+            padding: 10px;
+            &:hover {
+                background: rgba($color: #eee, $alpha: 0.2);
+                border-radius: 5px;
+            } 
         }
+        li {
+            padding: 0.1rem 0;
+        }
+
+        .border {
+            display: none;
+        }
+    }
+    .navbar__links[data-visible="true"] {
+        transform: translateX(0%);
+    }
+    .active {
+        border-bottom: 2px solid #eee;
     }
 }

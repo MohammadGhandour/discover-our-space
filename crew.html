@@ -28,25 +28,17 @@
         <header>
             <nav class="navbar">
                 <a href="index.html"><img src="media/home/logo.svg" alt="logo" class="logo"></a>
+                <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                </button>
                 <div class="navbar__line"></div>
-                <ul class="navbar__links" id="first-navbar">
+                <ul class="navbar__links" id="primary-navigation" data-visible="false">
                     <li class="navbar__link"><a href="index.html">00 home</a></li>
                     <li class="navbar__link"><a href="destination.html">01 destination</a></li>
-                    <li class="navbar__link"><a href="crew.html">02 crew</a>
+                    <li class="navbar__link"><a href="crew.html" class="active">02 crew</a>
                         <div class="border"></div>
                     </li>
                     <li class="navbar__link"><a href="technology.html">03 technology</a></li>
                 </ul>
-                <div id="sidebar">
-                    <img src="media/icon-hamburger.svg" alt="hamburger" id="open">
-                    <img src="media/icon-close.svg" alt="close" id="close">
-                    <ul class="second-navbar" id="secondNavbar">
-                        <li class="second-link"><a href="index.html">00 home</a></li>
-                        <li class="second-link"><a href="destination.html">01 destination</a></li>
-                        <li class="second-link"><a href="crew.html" class="active">02 crew</a></li>
-                        <li class="second-link"><a href="technology.html">03 technology</a></li>
-                    </ul>
-                </div>
             </nav>
         </header>
 
@@ -71,7 +63,7 @@
             <img src="media/crew/image-douglas-hurley.png" alt="member" id="member">
             <div class="back-next">
                 <div class="nextButton">
-                    <a href="destination.html" class=" back"><i class="fas fa-space-shuttle"></i>back</a>
+                    <a href="destination.html" class="back"><i class="fas fa-space-shuttle"></i>back</a>
                 </div>
                 <div class="nextButton">
                     <a href="technology.html" class="next">next<i class="fas fa-space-shuttle"></i></a>
